@@ -11,10 +11,10 @@ type MenuItemProps = {
 
 export default function MenuItem(props: MenuItemProps) {
   const url = props.url ? props.url : ''
-  const classLink = `flex flex-col justify-center items-center w-20 h-20 text-gray-600 ${props.className}`
+  const classLink = `flex flex-col justify-center items-center w-20 h-20 text-gray-600 dark:text-gray-200 ${props.className}`
 
   return (
-    <li className="hover:bg-gray-100 cursor-pointer" onClick={props.onClick}>
+    <li className="hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer" onClick={props.onClick}>
       {props.url ? (
         <Link href={url} className={classLink}>
           {props.icone}
